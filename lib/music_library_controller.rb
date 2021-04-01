@@ -80,7 +80,9 @@ class MusicLibraryController
     input = gets.chomp
     indexed_input = input.to_i - 1
     x = Song.all.sort { |a, b| a.name <=> b.name }
-    puts "Playing #{x[indexed_input].name} by #{x[indexed_input].artist.name}"
+    if x[indexed_input]
+      puts "Playing #{x[indexed_input].name} by #{x[indexed_input].artist.name}"
+    end
   end
 
 
