@@ -80,7 +80,7 @@ class MusicLibraryController
     input = gets.chomp
     indexed_input = input.to_i - 1
     x = Song.all.sort { |a, b| a.name <=> b.name }
-    if x[indexed_input]
+    if x[indexed_input] && (x[0]..x.size)
       puts "Playing #{x[indexed_input].name} by #{x[indexed_input].artist.name}"
     end
   end
