@@ -81,8 +81,6 @@ class MusicLibraryController
     indexed_input = input - 1
     x = Song.all.sort { |a, b| a.name <=> b.name }
     puts "Playing #{x[indexed_input].name} by #{x[indexed_input].artist.name}"
-    binding.pry
-
   end
 
 
